@@ -1,12 +1,6 @@
-# **Assignment 1: Lane Line Detection** 
+# **Lane Line Detection** 
 
-**ECE493:** Autonomous Vehicles
-
-David Ferris (20553578)
-
-djeferri@uwaterloo.ca
-
-## **Part 1:** Pipeline Description
+## Pipeline Description
 My pipeline consisted of 8 steps.  The pipeline will be demonstrated on the below image.
 
 ![alt text](report_images/0.png)
@@ -76,7 +70,7 @@ The final image is shown with left and right lanes clearly detected.
 | Hough Transform      | max_line_gap   | 10        |
 
 
-## **Part 2:** Potential Shortcomings
+## Potential Shortcomings
 #### Fixed ROI and Number of Lanes
 This implementation works extremely well when the car is situated between two lane lines.  It is unlikely to work well when the car changes lanes, or if more than two lanes are clearly visible.  More generally, this inflexibility criticism applies to all heuristic-based image processing pipelines: they don't work well in unexpected situations.
 
@@ -86,7 +80,7 @@ The main component of this pipeline is the edge detection and Hough Transform.  
 #### Confidence Level
 At no point is a confiedence level assigned to the lane line prediction.  This could possibly be added in the line combination step, especially given that there is some expected lane direction, but at the moment the only pipeline output is the prediction itself.
 
-## **Part 3:** Possible Improvements
+## Possible Improvements
 The above shortcomings could be improved with the addition or more heuristics and parameter tuning, however the improvements discussed here are larger and more structural changes.
 
 #### Temporal Filtering
